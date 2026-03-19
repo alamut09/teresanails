@@ -1,54 +1,42 @@
-/* Improved CSS for accessibility, performance optimization, and semantic structure */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-header, footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+.header {
+    background-color: #f8f9fa;
+    padding: 20px;
     text-align: center;
 }
 
-nav {
-    margin: 10px 0;
+.hero {
+    background-image: url('hero-bg.jpg');
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-nav a {
-    color: #fff;
+.section {
+    padding: 40px 20px;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
     padding: 10px 15px;
     text-decoration: none;
-}
-
-nav a:hover {
-    background-color: #555;
-}
-
-main {
-    padding: 20px;
-}
-
-h1, h2, h3 {
-    color: #333;
-}
-
-button {
-    background-color: #007bff;
-    border: none;
     border-radius: 5px;
+}
+
+.footer {
+    background-color: #343a40;
     color: white;
-    cursor: pointer;
-    padding: 10px 20px;
+    text-align: center;
+    padding: 10px 0;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-img {
-    max-width: 100%; /* Ensure images are responsive */
-    height: auto;
+@media (max-width: 768px) {
+    .header, .footer {
+        padding: 10px;
+    }
+    .hero {
+        height: 30vh;
+    }
 }
