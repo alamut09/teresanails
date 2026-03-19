@@ -3,167 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Teresa Nails - Los mejores servicios de manicura, estética y tatuajes en Santander. Reserva tu cita ahora con nuestras expertas.">
-    <meta name="theme-color" content="#000000">
-    <title>Teresa Nails | Santander - Manicura, Estética y Tatuajes</title>
+    <title>Teresa Nails | Santander</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BeautySalon",
-        "name": "Teresa Nails",
-        "description": "Salón de belleza especializado en manicura, estética y tatuajes",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Paseo Altamira 208",
-            "addressLocality": "Santander",
-            "postalCode": "39006",
-            "addressCountry": "ES"
-        },
-        "telephone": "+34 622 35 45 42",
-        "url": "https://www.instagram.com/teresanails/",
-        "image": "jpeg/cabecera2.jpg",
-        "sameAs": [
-            "https://www.instagram.com/teresanails",
-            "https://www.tiktok.com/@teresanails"
-        ]
-    }
-    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="main-header" role="banner">
+    <header class="main-header">
         <div class="logo-container">
-            <a href="/" class="logo-link" aria-label="Teresa Nails - Inicio">
+            <a href="index.html" class="logo-link">
                 <img src="jpeg/cabecera2.jpg" alt="Teresa Nails Logo" class="header-logo-img">
             </a>
         </div>
-        <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+        <nav class="main-nav">
             <a href="#agendas">Agendas</a>
             <a href="#precios">Precios</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
-    <main>
-        <section class="hero" aria-label="Sección principal">
-            <div class="hero-content">
-                <h1 class="hero-title">Si estás aquí significa que entiendes la <span>pvta vibra wey</span></h1>
-                <p class="hero-subtitle">Manicura • Estética • Santander</p>
-                <a href="#agendas" class="btn-cta" aria-label="Ir a reservar cita">Reservar Cita</a>
-            </div>
-        </section>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Si estás aquí significa que entiendes la <span>pvta vibra wey</span></h1>
+            <p class="hero-subtitle">Manicura • Estética • Santander</p>
+            <a href="#agendas" class="btn-cta">Reservar Cita</a>
+        </div>
+    </section>
 
-        <section id="agendas" class="section-transparent" aria-labelledby="agendas-title">
-            
-            <div class="condiciones-reserva">
-                <div class="condiciones-header">
-                    <h2 class="condiciones-title"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> IMPORTANTE: CONDICIONES</h2>
+    <section id="agendas" class="section-transparent">
+        
+        <div class="condiciones-reserva">
+            <div class="condiciones-header">
+                <h3><i class="fas fa-exclamation-triangle"></i> IMPORTANTE: CONDICIONES</h3>
+            </div>
+            <div class="condiciones-grid">
+                <div class="condicion-bizum">
+                    <span class="monto-destacado">50%</span>
+                    <p>Anticipo vía <strong>Bizum</strong></p>
+                    <div class="bizum-box">+34 624 11 40 35</div>
                 </div>
-                <div class="condiciones-grid">
-                    <div class="condicion-bizum">
-                        <span class="monto-destacado">50%</span>
-                        <p>Anticipo vía <strong>Bizum</strong></p>
-                        <div class="bizum-box">+34 624 11 40 35</div>
-                    </div>
-                    <div class="condicion-info">
-                        <ul>
-                            <li><i class="fas fa-clock" aria-hidden="true"></i> <strong>24 horas</strong> para confirmar con el pago.</li>
-                            <li><i class="fas fa-ban" aria-hidden="true"></i> Anticipo <strong>no reembolsable</strong> por inasistencia.</li>
-                            <li><i class="fas fa-calendar-check" aria-hidden="true"></i> Cambios con <strong>48h</strong> de antelación.</li>
-                        </ul>
-                    </div>
+                <div class="condicion-info">
+                    <ul>
+                        <li><i class="fas fa-clock"></i> <strong>24 horas</strong> para confirmar con el pago.</li>
+                        <li><i class="fas fa-ban"></i> Anticipo <strong>no reembolsable</strong> por inasistencia.</li>
+                        <li><i class="fas fa-calendar-check"></i> Cambios con <strong>48h</strong> de antelación.</li>
+                    </ul>
                 </div>
             </div>
+        </div>
 
-            <h2 class="title-decor" id="agendas-title">Nuestras <span>Agendas</span></h2>
-            
-            <div class="agendas-container">
-                <article class="empleada-row">
-                    <div class="agenda-card">
-                        <img src="jpeg/chica1.jpg" alt="Teresa - Especialista en Nails y Lifting" class="img-perfil" loading="lazy">
-                        <h3>Teresa</h3>
-                        <span class="tag">Nails & Lifting</span>
-                        <a href="https://wa.me/34624114035" class="btn-reserva" aria-label="Reservar con Teresa por WhatsApp">Reservar</a>
-                    </div>
-                    <div class="mini-galeria-fundida" role="region" aria-label="Galería de trabajos de Teresa">
-                        <img src="jpeg/teresa_1.jpg" alt="Trabajo de manicura realizado por Teresa" loading="lazy">
-                        <img src="jpeg/teresa_2.jpg" alt="Otro trabajo de manicura realizado por Teresa" loading="lazy">
-                    </div>
-                </article>
-
-                <article class="empleada-row">
-                    <div class="agenda-card">
-                        <img src="jpeg/chica2.jpg" alt="Nataly - Especialista en Manicura" class="img-perfil" loading="lazy">
-                        <h3>Nataly</h3>
-                        <span class="tag">Manicura</span>
-                        <a href="https://wa.me/34624114035" class="btn-reserva" aria-label="Reservar con Nataly por WhatsApp">Reservar</a>
-                    </div>
-                    <div class="mini-galeria-fundida" role="region" aria-label="Galería de trabajos de Nataly">
-                        <img src="jpeg/nataly_1.jpg" alt="Trabajo de manicura realizado por Nataly" loading="lazy">
-                        <img src="jpeg/nataly_2.jpg" alt="Otro trabajo de manicura realizado por Nataly" loading="lazy">
-                    </div>
-                </article>
-
-                <article class="empleada-row row-last">
-                    <div class="agenda-card">
-                        <img src="jpeg/chica4.jpg" alt="Eva - Artista de Tatuajes" class="img-perfil border-rubi" loading="lazy">
-                        <h3>Eva</h3>
-                        <span class="tag tag-tatu">Tattoo Artist</span>
-                        <a href="https://wa.me/34624114035" class="btn-reserva btn-tatu" aria-label="Reservar tatuaje con Eva por WhatsApp">Reservar Tatuaje</a>
-                    </div>
-                    <div class="mini-galeria-fundida" role="region" aria-label="Galería de tatuajes de Eva">
-                        <img src="jpeg/eva_1.jpg" alt="Tatuaje realizado por Eva" loading="lazy">
-                        <img src="jpeg/eva_2.jpg" alt="Otro tatuaje realizado por Eva" loading="lazy">
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="precios" class="section-transparent text-center" aria-labelledby="precios-title">
-            <h2 class="title-decor" id="precios-title">Carta de <span>Precios</span></h2>
-            <div class="precios-container-main">
-                <div class="precios-wrapper-fundido">
-                    <img src="jpeg/precios.jpg" alt="Lista de precios de servicios - Manicura, Estética y Tatuajes" class="img-precios" loading="lazy">
+        <h2 class="title-decor">Nuestras <span>Agendas</span></h2>
+        
+        <div class="agendas-container">
+            <div class="empleada-row">
+                <div class="agenda-card">
+                    <img src="jpeg/chica1.jpg" alt="Teresa" class="img-perfil">
+                    <h3>Teresa</h3>
+                    <span class="tag">Nails & Lifting</span>
+                    <a href="https://wa.me/34624114035" class="btn-reserva">Reservar</a>
+                </div>
+                <div class="mini-galeria-fundida">
+                    <img src="jpeg/teresa_1.jpg" alt="Trabajo Teresa 1">
+                    <img src="jpeg/teresa_2.jpg" alt="Trabajo Teresa 2">
                 </div>
             </div>
-        </section>
-    </main>
 
-    <footer id="contacto" class="footer" role="contentinfo">
+            <div class="empleada-row">
+                <div class="agenda-card">
+                    <img src="jpeg/chica2.jpg" alt="Nataly" class="img-perfil">
+                    <h3>Nataly</h3>
+                    <span class="tag">Manicura</span>
+                    <a href="https://wa.me/34624114035" class="btn-reserva">Reservar</a>
+                </div>
+                <div class="mini-galeria-fundida">
+                    <img src="jpeg/nataly_1.jpg" alt="Trabajo Nataly 1">
+                    <img src="jpeg/nataly_2.jpg" alt="Trabajo Nataly 2">
+                </div>
+            </div>
+
+            <div class="empleada-row row-last">
+                <div class="agenda-card">
+                    <img src="jpeg/chica4.jpg" alt="Eva" class="img-perfil border-rubi">
+                    <h3>Eva</h3>
+                    <span class="tag tag-tatu">Tattoo Artist</span>
+                    <a href="https://wa.me/34624114035" class="btn-reserva btn-tatu">Reservar Tatu</a>
+                </div>
+                <div class="mini-galeria-fundida">
+                    <img src="jpeg/eva_1.jpg" alt="Tattoo Eva 1">
+                    <img src="jpeg/eva_2.jpg" alt="Tattoo Eva 2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="precios" class="section-transparent text-center">
+        <h2 class="title-decor">Carta de <span>Precios</span></h2>
+        <div class="precios-container-main">
+            <div class="precios-wrapper-fundido">
+                <img src="jpeg/precios.jpg" alt="Lista de Precios" class="img-precios">
+            </div>
+        </div>
+    </section>
+
+   <footer id="contacto" class="footer">
         <div class="footer-grid">
             <div class="footer-brand">
                 <h3 class="logo-footer">Teresa <span>Nails</span></h3>
-                <address>
-                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Paseo Altamira 208, 39006 Santander</p>
-                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+34622354542">+34 622 35 45 42</a></p>
-                </address>
+                <p><i class="fas fa-map-marker-alt"></i> Paseo Altamira 208, 39006 Santander</p>
+                <p><i class="fas fa-phone"></i> +34 622 35 45 42</p>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/teresanails" target="_blank" rel="noopener noreferrer" aria-label="Visita nuestro Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@teresanails" target="_blank" rel="noopener noreferrer" aria-label="Visita nuestro TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/teresanails" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@teresanails" target="_blank"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
             <div class="footer-map">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.045237834277!2d-3.814887323428987!3d43.467874671111534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd494bc9837fb7cf%3A0x39a9da78437c7a71!2sP.%C2%BA%20de%20Altamira%2C%20208%2C%2039006%20Santander%2C%20Cantabria!5e0!3m2!1ses!2ses!4v1710000000000!5m2!1ses!2ses" 
-                    width="100%" height="100%" class="footer-map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                    title="Ubicación de Teresa Nails en Santander">
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Teresa Nails Santander | Ángeles y Demonios</p>
+            <p>© 2026 Teresa Nails Santander | Ángeles y Demonios</p>
         </div>
     </footer>
-    
-    <div class="float-container" role="region" aria-label="Enlaces de contacto rápido">
-        <a href="https://www.tiktok.com/@teresanails" target="_blank" rel="noopener noreferrer" class="float-btn tt" aria-label="Síguenos en TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.instagram.com/teresanails" target="_blank" rel="noopener noreferrer" class="float-btn ig" aria-label="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/34624114035" class="float-btn wa" aria-label="Contacta por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <div class="float-container">
+        <a href="#" class="float-btn tt"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="float-btn ig"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/34624114035" class="float-btn wa"><i class="fab fa-whatsapp"></i></a>
     </div>
 
 </body>

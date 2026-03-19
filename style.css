@@ -1,42 +1,214 @@
-.header {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
+:root {
+    --merlot: #3D0D11;
+    --rubi: #7E0F0D;
+    --flamingo: #FFBEC5;
+    --crudo: #FFF4EB;
+    --negro: #120405;
+    --fuente-titulos: 'Cinzel Decorative', cursive;
+    --fuente-texto: 'Montserrat', sans-serif;
 }
 
-.hero {
-    background-image: url('hero-bg.jpg');
-    height: 50vh;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    background: linear-gradient(rgba(18, 4, 5, 0.92), rgba(61, 13, 17, 0.92)), url('jpeg/cabecera1.jpg') center/cover fixed; 
+    color: var(--crudo); 
+    font-family: var(--fuente-texto);
+    overflow-x: hidden;
+}
+
+/* =========================================
+   HEADER CON LOGO IMAGEN CABECERA2.JPG (REVISADO)
+   ========================================= */
+.main-header {
+    background: rgba(18, 4, 5, 0.8); /* Fondo oscuro con opacidad */
+    border-bottom: 2px solid var(--rubi);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%; /* Ajuste de padding vertical */
+    backdrop-filter: blur(5px);
+}
+
+.logo-container {
+    height: 60px; /* Altura máxima para el logo en la cabecera */
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: block;
+    height: 100%;
+}
+
+.header-logo-img {
+    height: 100%; /* La imagen ocupa toda la altura del contenedor */
+    width: auto; /* Mantiene la proporción */
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.header-logo-img:hover {
+    transform: scale(1.05); /* Efecto sutil al pasar el ratón */
+}
+
+.main-nav {
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: white;
+    gap: 30px;
 }
 
-.section {
-    padding: 40px 20px;
-}
-
-.button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
+.main-nav a {
+    color: var(--crudo);
     text-decoration: none;
-    border-radius: 5px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
-.footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+/* HERO */
+.hero { height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 5%; }
+.hero-title { font-family: var(--fuente-titulos); font-size: clamp(1.8rem, 5vw, 3.5rem); line-height: 1.2; }
+.hero-title span { color: var(--rubi); display: block; }
+.hero-subtitle { color: var(--flamingo); letter-spacing: 5px; text-transform: uppercase; margin: 25px 0; font-weight: 800; font-size: clamp(0.8rem, 2vw, 1rem); }
+.btn-cta { padding: 15px 35px; background: var(--rubi); color: var(--crudo); text-decoration: none; font-family: var(--fuente-titulos); border: 2px solid var(--crudo); box-shadow: 5px 5px 0px var(--crudo); }
+
+/* SECCIONES FUNDIDAS (SIN RECUADROS) */
+.section-transparent { padding: 80px 5%; background: transparent; }
+
+.title-decor { font-family: var(--fuente-titulos); text-align: center; margin-bottom: 60px; font-size: clamp(2rem, 6vw, 2.8rem); }
+.title-decor span { color: var(--rubi); }
+
+/* CONDICIONES (Mantenemos fondo sólido para claridad) */
+.condiciones-reserva {
+    background: var(--crudo); color: var(--merlot);
+    max-width: 900px; margin: 0 auto 80px;
+    border-radius: 15px; border: 4px solid var(--rubi);
+    box-shadow: 10px 10px 0px var(--rubi);
 }
+.condiciones-header { background: var(--rubi); color: white; padding: 15px; text-align: center; font-family: var(--fuente-titulos); }
+.condiciones-grid { display: flex; flex-wrap: wrap; padding: 30px; gap: 20px; align-items: center; }
+.condicion-bizum { flex: 1; text-align: center; border-right: 2px dashed var(--rubi); min-width: 250px; }
+.monto-destacado { font-size: 3.5rem; font-weight: 800; color: var(--rubi); }
+.bizum-box { background: var(--merlot); color: white; padding: 10px 20px; border-radius: 8px; font-weight: 800; }
+
+/* EMPLEADOS FUNDIDOS */
+.agendas-container { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+.empleada-row { 
+    display: flex; flex-wrap: wrap; gap: 30px; 
+    align-items: center; justify-content: center;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255,190,197, 0.1);
+}
+.row-last { border-bottom: none; }
+
+.agenda-card { background: transparent; text-align: center; width: 220px; }
+.img-perfil { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--flamingo); margin-bottom: 15px; }
+.border-rubi { border-color: var(--rubi); }
+.tag { display: block; color: var(--flamingo); font-weight: 800; margin-bottom: 15px; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; }
+.tag-tatu { color: var(--rubi); }
+
+.btn-reserva { 
+    display: inline-block; padding: 10px 25px; 
+    background: transparent; color: var(--crudo); 
+    border: 2px solid var(--flamingo); border-radius: 30px; 
+    text-decoration: none; font-weight: 700; transition: 0.3s;
+}
+.btn-reserva:hover { background: var(--flamingo); color: var(--merlot); }
+.btn-tatu { border-color: var(--rubi); }
+.btn-tatu:hover { background: var(--rubi); }
+
+/* GALERÍA FUNDIDA */
+.mini-galeria-fundida { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; min-width: 300px; }
+.mini-galeria-fundida img { 
+    width: 100%; height: 250px; object-fit: cover; border-radius: 10px; 
+    filter: grayscale(30%); transition: 0.5s;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+}
+.mini-galeria-fundida img:hover { filter: grayscale(0%); transform: scale(1.02); }
+
+/* =========================================
+   CORRECCIÓN CENTRADO DE PRECIOS
+   ========================================= */
+.text-center {
+    text-align: center;
+}
+
+.precios-container-main {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.precios-wrapper-fundido {
+    position: relative;
+    display: inline-block;
+    max-width: 90%; /* Evita que se salga en pantallas pequeñas */
+}
+
+.img-precios { 
+    display: block;
+    max-width: 100%; 
+    width: 650px; 
+    height: auto;
+    margin: 0 auto; /* Refuerzo de centrado */
+    border-radius: 15px;
+    
+    /* Máscara de fundido: centro claro, bordes suaves */
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .img-precios {
+        width: 100%; /* Ocupa todo el ancho en móvil */
+        mask-image: none; /* Quitamos fundido en móvil para leer mejor los precios pequeños */
+        -webkit-mask-image: none;
+        border: 2px solid var(--crudo); /* Añadimos borde sutil en móvil para contraste */
+    }
+}
+
+/* FOOTER */
+.footer { background: var(--negro); padding: 60px 5%; border-top: 3px solid var(--rubi); }
+.footer-grid { display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
+.logo-footer { font-family: var(--fuente-titulos); font-size: 1.5rem; }
+.logo-footer span { color: var(--rubi); }
+.footer-brand i { color: var(--rubi); margin-right: 10px; }
+.social-links { margin-top: 20px; display: flex; gap: 20px; }
+.social-links a { color: white; font-size: 1.5rem; }
+.footer-map {
+    flex: 1;
+    min-width: 320px;
+    height: 300px; /* Altura fija para el mapa */
+    border: 3px solid var(--rubi);
+    border-radius: 15px;
+    overflow: hidden; /* Esto hace que el mapa respete las esquinas redondeadas */
+}
+
+.footer-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* FLOTANTES */
+.float-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; }
+.float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; border: 1px solid white; transition: 0.3s; }
+.wa { background: #25d366; }
+.ig { background: #E1306C; }
+.tt { background: #000000; }
 
 @media (max-width: 768px) {
-    .header, .footer {
-        padding: 10px;
-    }
-    .hero {
-        height: 30vh;
-    }
+    .main-header { flex-direction: column; padding: 15px; }
+    .logo-container { height: 50px; margin-bottom: 10px; }
+    .mini-galeria-fundida { grid-template-columns: 1fr; }
+    .footer-grid { flex-direction: column; text-align: center; }
 }
